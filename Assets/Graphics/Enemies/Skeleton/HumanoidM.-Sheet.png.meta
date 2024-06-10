@@ -1,0 +1,739 @@
+fileFormatVersion: 2
+guid: 44263565fcaae8044be4c8ba28e1c6fd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6644250149364531888
+    second: HumanoidM.-Sheet_0
+  - first:
+      213: 5084112228530882995
+    second: HumanoidM.-Sheet_1
+  - first:
+      213: 9175492251368598310
+    second: HumanoidM.-Sheet_2
+  - first:
+      213: 8973764427342496159
+    second: HumanoidM.-Sheet_3
+  - first:
+      213: 1475282922064451702
+    second: HumanoidM.-Sheet_4
+  - first:
+      213: 3027774947910327199
+    second: HumanoidM.-Sheet_5
+  - first:
+      213: -4567871041413803976
+    second: HumanoidM.-Sheet_6
+  - first:
+      213: 180690074786654719
+    second: HumanoidM.-Sheet_7
+  - first:
+      213: 1487979250082942384
+    second: HumanoidM.-Sheet_8
+  - first:
+      213: 7145255811787376955
+    second: HumanoidM.-Sheet_9
+  - first:
+      213: 310828412283509801
+    second: HumanoidM.-Sheet_10
+  - first:
+      213: -2750346721508028864
+    second: HumanoidM.-Sheet_11
+  - first:
+      213: 784746553186808081
+    second: HumanoidM.-Sheet_12
+  - first:
+      213: -590084206845702009
+    second: HumanoidM.-Sheet_13
+  - first:
+      213: 5049004784283313124
+    second: HumanoidM.-Sheet_14
+  - first:
+      213: -717422497888089365
+    second: HumanoidM.-Sheet_15
+  - first:
+      213: -6803938610281973791
+    second: HumanoidM.-Sheet_16
+  - first:
+      213: 1386266568231080271
+    second: HumanoidM.-Sheet_17
+  - first:
+      213: -8226266798665150682
+    second: HumanoidM.-Sheet_18
+  - first:
+      213: 2715602427563967768
+    second: HumanoidM.-Sheet_19
+  - first:
+      213: 511566349810860255
+    second: HumanoidM.-Sheet_20
+  - first:
+      213: -4523845353470401446
+    second: HumanoidM.-Sheet_21
+  - first:
+      213: -6510865343887533298
+    second: HumanoidM.-Sheet_22
+  - first:
+      213: 4664685089023003602
+    second: HumanoidM.-Sheet_23
+  - first:
+      213: 4503517987823240813
+    second: HumanoidM.-Sheet_24
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d7a4021b1eac3a0800000000000000
+      internalID: -6644250149364531888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 200
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b98dc392256e8640800000000000000
+      internalID: 5084112228530882995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 200
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62bac2ab695e55f70800000000000000
+      internalID: 9175492251368598310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 200
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9149cd9337398c70800000000000000
+      internalID: 8973764427342496159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 200
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6781ad05002497410800000000000000
+      internalID: 1475282922064451702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 200
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9b9506f541d40a20800000000000000
+      internalID: 3027774947910327199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 150
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8309cbc4d79ab90c0800000000000000
+      internalID: -4567871041413803976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 150
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff9e81a6aa0f18200800000000000000
+      internalID: 180690074786654719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 150
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd885a8e3d56a410800000000000000
+      internalID: 1487979250082942384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 150
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b39c1eabd4c092360800000000000000
+      internalID: 7145255811787376955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 150
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92cd14c4bc8405400800000000000000
+      internalID: 310828412283509801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 150
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04e8a5f8a3ec4d9d0800000000000000
+      internalID: -2750346721508028864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 111796515daf3ea00800000000000000
+      internalID: 784746553186808081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 100
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 780d46f4a899fc7f0800000000000000
+      internalID: -590084206845702009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 100
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e3647cb91ba11640800000000000000
+      internalID: 5049004784283313124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 100
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beac18b0a043b06f0800000000000000
+      internalID: -717422497888089365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 100
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7f39cf1ed8391a0800000000000000
+      internalID: -6803938610281973791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41d96b59120d3310800000000000000
+      internalID: 1386266568231080271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 50
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62f49f56eed66dd80800000000000000
+      internalID: -8226266798665150682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 50
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 815832e1502cfa520800000000000000
+      internalID: 2715602427563967768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 50
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd0058f72e2791700800000000000000
+      internalID: 511566349810860255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 50
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a54689f8e921831c0800000000000000
+      internalID: -4523845353470401446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 50
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b9e2d3772c4a5a0800000000000000
+      internalID: -6510865343887533298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db0748bf5a4cb040800000000000000
+      internalID: 4664685089023003602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HumanoidM.-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6649cfcfb5bf7e30800000000000000
+      internalID: 4503517987823240813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4f2b396b2569d09468bf33cb378fb02c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HumanoidM.-Sheet_0: -6644250149364531888
+      HumanoidM.-Sheet_1: 5084112228530882995
+      HumanoidM.-Sheet_10: 310828412283509801
+      HumanoidM.-Sheet_11: -2750346721508028864
+      HumanoidM.-Sheet_12: 784746553186808081
+      HumanoidM.-Sheet_13: -590084206845702009
+      HumanoidM.-Sheet_14: 5049004784283313124
+      HumanoidM.-Sheet_15: -717422497888089365
+      HumanoidM.-Sheet_16: -6803938610281973791
+      HumanoidM.-Sheet_17: 1386266568231080271
+      HumanoidM.-Sheet_18: -8226266798665150682
+      HumanoidM.-Sheet_19: 2715602427563967768
+      HumanoidM.-Sheet_2: 9175492251368598310
+      HumanoidM.-Sheet_20: 511566349810860255
+      HumanoidM.-Sheet_21: -4523845353470401446
+      HumanoidM.-Sheet_22: -6510865343887533298
+      HumanoidM.-Sheet_23: 4664685089023003602
+      HumanoidM.-Sheet_24: 4503517987823240813
+      HumanoidM.-Sheet_3: 8973764427342496159
+      HumanoidM.-Sheet_4: 1475282922064451702
+      HumanoidM.-Sheet_5: 3027774947910327199
+      HumanoidM.-Sheet_6: -4567871041413803976
+      HumanoidM.-Sheet_7: 180690074786654719
+      HumanoidM.-Sheet_8: 1487979250082942384
+      HumanoidM.-Sheet_9: 7145255811787376955
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
