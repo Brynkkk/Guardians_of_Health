@@ -23,8 +23,8 @@ public class PlayerStats : CharacterStats
     protected override void Die()
     {
         base.Die();
-
+        Debug.Log("Die method in PlayerStats called.");
         player.Die();
-    }
 
+    }
 }

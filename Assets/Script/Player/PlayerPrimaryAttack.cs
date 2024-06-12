@@ -6,18 +6,27 @@ public class PlayerPrimaryAttack : PlayerState
 {
     private int comboCounter;
     private float lastTimeAttacked;
-    private float comboWindow = 2;
+    private float comboWindow = 2f;
+
+    private PlayerAnimationTriggers pat;
+    private Player pp;
 
     public PlayerPrimaryAttack(Player _player, PlayerStateMachine _stateMachine, string animBoolName) : base(_player, _stateMachine, animBoolName)
     {
+        this.pp = _player; // Ensure the Player instance is assigned
+        this.pat = _player.GetComponentInChildren<PlayerAnimationTriggers>(); // Assign the PlayerAnimationTriggers instance
     }
 
     public override void Enter()
     {
         base.Enter();
+        Debug.Log("Entering Primary Attack State");
+
+        AudioManager.instance.PlaySFX(2, null);
 
         if (!player.UseStamina(player.primaryAttackStaminaCost))
         {
+            AudioManager.instance.StopSFX(2);
             stateMachine.ChangeState(player.idleState);
             return;
         }
@@ -39,6 +48,9 @@ public class PlayerPrimaryAttack : PlayerState
         }
 
         player.SetVelocity(player.attackMovement[comboCounter].x * attackDirection, player.attackMovement[comboCounter].y);
+
+        pp.isHeavyAttack = DecideAttackType();
+        Debug.Log($"Primary Attack Type: {(pp.isHeavyAttack ? "Heavy" : "Normal")}");
 
         stateTimer = .1f;
     }
@@ -64,5 +76,9 @@ public class PlayerPrimaryAttack : PlayerState
             stateMachine.ChangeState(player.idleState);
         }
     }
-}
 
+    private bool DecideAttackType()
+    {
+        return Random.value > 100f; // 50% chance to perform a heavy attack
+    }
+}

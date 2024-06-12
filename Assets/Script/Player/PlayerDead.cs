@@ -15,6 +15,8 @@ public class PlayerDead : PlayerState
 
     public override void Enter()
     {
+        Debug.Log("Entered PlayerDead state.");
+        AudioManager.instance.PlaySFX(9, null);
         base.Enter();
     }
 

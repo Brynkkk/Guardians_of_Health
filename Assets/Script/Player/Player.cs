@@ -4,6 +4,7 @@ using UnityEngine;
 public class Player : Entity
 {
     public bool isBusy { get; private set; }
+    public bool isHeavyAttack;
     public PlayerStats playerStats { get; private set; }
 
     [Header("Move Info")]
@@ -51,6 +52,11 @@ public class Player : Entity
     public PlayerDead deadState { get; private set; }
     #endregion
 
+    private Vector3 respawnPoint;
+    public int potionCount;
+    public const int maxPotions = 3;
+    private bool isAtCheckpoint;
+
     protected override void Awake()
     {
         base.Awake();
@@ -70,6 +76,9 @@ public class Player : Entity
         counterAttack = new PlayerCounterAttack(this, stateMachine, "CounterAttack");
 
         deadState = new PlayerDead(this, stateMachine, "Die");
+
+        respawnPoint = transform.position; // Save starting position as respawn point
+        potionCount = maxPotions; // Start with full potions
     }
 
     protected override void Start()
@@ -92,6 +101,21 @@ public class Player : Entity
         if (!isBusy && !IsPerformingStaminaConsumingAction() && staminaRegenCoroutine == null)
         {
             staminaRegenCoroutine = StartCoroutine(DelayStaminaRegen());
+        }
+
+        // Check for checkpoint activation
+        if (isAtCheckpoint && Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("F key pressed. Setting respawn point.");
+            AudioManager.instance.PlaySFX(7, null);
+            SetRespawnPoint();
+        }
+
+        // Check for potion use
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            AudioManager.instance.PlaySFX(10, null);
+            UsePotion();
         }
     }
 
@@ -156,7 +180,91 @@ public class Player : Entity
     public override void Die()
     {
         base.Die();
+        Debug.Log("Die method in PlayerStats called.");
         stateMachine.ChangeState(deadState);
+
+        // Start respawn process
+        StartCoroutine(Respawn());
+    }
+
+    private IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(1f); // Wait for 1 second before respawning
+        RespawnPlayer();
+    }
+
+    private void RespawnPlayer()
+    {
+        transform.position = respawnPoint;
+        playerStats.currHp = playerStats.GetMaxHpValue();
+        playerStats.currStamina = playerStats.GetMaxStamina();
+
+        stateMachine.ChangeState(idleState); // Reset to idle state
+        Debug.Log("Player respawned. State set to idle.");
+
+        if (playerStats.onHpChange != null)
+        {
+            playerStats.onHpChange();
+        }
+
+        if (playerStats.onStaminaChange != null)
+        {
+            playerStats.onStaminaChange();
+        }
+    }
+
+    private void SetRespawnPoint()
+    {
+        respawnPoint = transform.position;
+        potionCount = maxPotions; // Refill potions at checkpoint
+        Debug.Log("Respawn point set to: " + respawnPoint + " and potions refilled.");
+    }
+
+    private void UsePotion()
+    {
+        if (potionCount > 0)
+        {
+            potionCount--;
+            HealPlayer(0.3f * playerStats.GetMaxHpValue());
+            Debug.Log("Potion used. Remaining potions: " + potionCount);
+        }
+        else
+        {
+            Debug.Log("No potions left.");
+        }
+    }
+
+    private void HealPlayer(float healAmount)
+    {
+        playerStats.currHp += (int)healAmount;
+        if (playerStats.currHp > playerStats.GetMaxHpValue())
+        {
+            playerStats.currHp = playerStats.GetMaxHpValue();
+        }
+
+        if (playerStats.onHpChange != null)
+        {
+            playerStats.onHpChange();
+        }
+        Debug.Log("Player healed by " + healAmount + ". Current HP: " + playerStats.currHp);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Checkpoint"))
+        {
+            isAtCheckpoint = true;
+            Debug.Log("Player at checkpoint. Press 'F' to set respawn point.");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Checkpoint"))
+        {
+            isAtCheckpoint = false;
+            Debug.Log("Player exited checkpoint.");
+        }
     }
 
     public void StartCounterAttackCooldown()
@@ -199,7 +307,7 @@ public class Player : Entity
 
     private IEnumerator RegenerateStamina()
     {
-        while (playerStats.currStamina < playerStats.maxStamina.GetValue())
+        while (playerStats.currStamina < playerStats.GetMaxStamina())
         {
             playerStats.RecoverStamina(staminaRegenValue);
             yield return new WaitForSeconds(staminaRegenSpeed);

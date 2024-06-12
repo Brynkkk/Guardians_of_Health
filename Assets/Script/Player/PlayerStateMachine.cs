@@ -14,11 +14,10 @@ public class PlayerStateMachine
 
     public void ChangeState(PlayerState _newState)
     {
+        Debug.Log($"Changing state from {currState.GetType().Name} to {_newState.GetType().Name}");
         currState.Exit();
         currState = _newState;
         currState.Enter();
     }
 
 }
-
-

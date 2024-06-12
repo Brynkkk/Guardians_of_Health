@@ -14,6 +14,7 @@ public class SkeletonBattle : EnemyState
 
     public override void Enter()
     {
+        AudioManager.instance.PlaySFX(4, null);
         base.Enter();
         player = PlayerManager.instance.player.transform;
     }

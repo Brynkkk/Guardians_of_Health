@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemySkeleton : Enemy
 {
     public float detectRange;
+    public bool isHeavyAttack;
 
     #region States
     public SkeletonIdle idleState { get; private set; }

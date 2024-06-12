@@ -22,11 +22,21 @@ public class CharacterStats : MonoBehaviour
     public int totalDamage;
 
     public System.Action onHpChange;
+    public System.Action onStaminaChange;
 
     protected virtual void Start()
     {
         currHp = GetMaxHpValue();
         currStamina = GetMaxStamina();
+
+        if (onHpChange != null)
+        {
+            onHpChange();
+        }
+        if (onStaminaChange != null)
+        {
+            onStaminaChange();
+        }
     }
 
     public virtual void TakeDamage(int damage)
@@ -35,6 +45,7 @@ public class CharacterStats : MonoBehaviour
 
         if (currHp <= 0)
         {
+            Debug.Log("Character died.");
             Die();
         }
     }
@@ -52,9 +63,15 @@ public class CharacterStats : MonoBehaviour
     public virtual void UseStamina(int amount)
     {
         currStamina -= amount;
+
         if (currStamina < 0)
         {
             currStamina = 0;
+        }
+
+        if (onStaminaChange != null)
+        {
+            onStaminaChange();
         }
     }
 
@@ -65,11 +82,25 @@ public class CharacterStats : MonoBehaviour
         {
             currStamina = maxStamina.GetValue();
         }
+
+        if (onStaminaChange != null)
+        {
+            onStaminaChange();
+        }
     }
 
-    public virtual void DoDamage(CharacterStats targetStats)
+    public virtual void DoDamage(CharacterStats targetStats, bool isHeavyAttack)
     {
-        totalDamage = damage.GetValue() + strength.GetValue();
+        if (isHeavyAttack)
+        {
+            totalDamage = damage.GetValue() + strength.GetValue() * 2;
+            Debug.Log("Is Heavy Attack");
+        }
+        else
+        {
+            totalDamage = damage.GetValue() + strength.GetValue();
+        }
+
         totalDamage -= targetStats.armor.GetValue();
         totalDamage = Mathf.Clamp(totalDamage, 0, int.MaxValue);
 
@@ -78,6 +109,7 @@ public class CharacterStats : MonoBehaviour
 
     protected virtual void Die()
     {
+        Debug.Log(gameObject.name + " died.");
     }
 
     public int GetMaxHpValue()

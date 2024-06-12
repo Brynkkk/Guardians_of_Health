@@ -12,12 +12,14 @@ public class PlayerSprint : PlayerGrounded
     public override void Enter()
     {
         base.Enter();
+        AudioManager.instance.PlaySFX(6, null);
 
     }
 
     public override void Exit()
     {
         base.Exit();
+        AudioManager.instance.StopSFX(6);
         player.SetZeroVelocity();
     }
 

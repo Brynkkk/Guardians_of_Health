@@ -18,6 +18,7 @@ public class SkeletonDead : EnemyState
 
     public override void Enter()
     {
+        AudioManager.instance.PlaySFX(5, null);
         base.Enter();
     }
 

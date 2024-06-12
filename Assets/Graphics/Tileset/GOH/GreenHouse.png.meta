@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      GreenHouse_0: -1670947456341303446
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -5,6 +5,8 @@ using UnityEngine;
 public class SkeletonStunned : EnemyState
 {
     private EnemySkeleton enemy;
+    private const int ArmorReduction = 20;
+
     public SkeletonStunned(Enemy _enemyBase, EnemyStateMachine _statemachine, string _animBoolName, EnemySkeleton enemy) : base(_enemyBase, _statemachine, _animBoolName)
     {
         this.enemy = enemy;
@@ -19,6 +21,8 @@ public class SkeletonStunned : EnemyState
         stateTimer = enemy.stunnedDuration;
 
         rb.velocity = new Vector2(-enemy.facingDirection * enemy.stunnedDirection.x, enemy.stunnedDirection.y);
+
+        enemy.stats.armor.AddModifier(-ArmorReduction);
     }
 
     public override void Exit()
@@ -26,13 +30,15 @@ public class SkeletonStunned : EnemyState
         base.Exit();
 
         enemy.fx.Invoke("CancelRedBlink", 0);
+
+        enemy.stats.armor.RemoveModifier(-ArmorReduction);
     }
 
     public override void Update()
     {
         base.Update();
 
-        if(stateTimer < 0)
+        if (stateTimer < 0)
         {
             stateMachine.ChangeState(enemy.idleState);
         }

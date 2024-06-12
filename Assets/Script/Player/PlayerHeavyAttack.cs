@@ -1,25 +1,31 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHeavyAttack : PlayerState
 {
-    private CharacterStats _characterStats;
-
     private int comboCounter;
     private float lastTimeAttacked;
-    private float comboWindow = 2;
+    private float comboWindow = 2f;
+
+    private PlayerAnimationTriggers pat;
+    private Player pp;
 
     public PlayerHeavyAttack(Player _player, PlayerStateMachine _stateMachine, string animBoolName) : base(_player, _stateMachine, animBoolName)
     {
+        this.pp = _player; // Ensure the Player instance is assigned
+        this.pat = _player.GetComponentInChildren<PlayerAnimationTriggers>(); // Assign the PlayerAnimationTriggers instance
     }
 
     public override void Enter()
     {
         base.Enter();
+        Debug.Log("Entering Heavy Attack State");
+
+        AudioManager.instance.PlaySFX(1, null);
 
         if (!player.UseStamina(player.heavyAttackStaminaCost))
         {
+            AudioManager.instance.StopSFX(1);
             stateMachine.ChangeState(player.idleState);
             return;
         }
@@ -41,6 +47,9 @@ public class PlayerHeavyAttack : PlayerState
         }
 
         player.SetVelocity(player.attackMovement[comboCounter].x * attackDirection, player.attackMovement[comboCounter].y);
+
+        pp.isHeavyAttack = DecideAttackType();
+        Debug.Log($"Heavy Attack Type: {(pp.isHeavyAttack ? "Heavy" : "Normal")}");
 
         stateTimer = .1f;
     }
@@ -66,5 +75,9 @@ public class PlayerHeavyAttack : PlayerState
             stateMachine.ChangeState(player.idleState);
         }
     }
-}
 
+    private bool DecideAttackType()
+    {
+        return Random.value > 0f; // 50% chance to perform a heavy attack
+    }
+}

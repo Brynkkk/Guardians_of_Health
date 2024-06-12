@@ -15,14 +15,13 @@ public class PlayerAnimationTriggers : MonoBehaviour
     {
         Collider2D[] col = Physics2D.OverlapCircleAll(player.attackCheck.position, player.attackCheckRadius);
 
-        foreach(var hit in col)
+        foreach (var hit in col)
         {
-            if(hit.GetComponent<Enemy>() != null)
+            if (hit.GetComponent<Enemy>() != null)
             {
                 EnemyStats target = hit.GetComponent<EnemyStats>();
-
-                player.stats.DoDamage(target);
-                
+                player.playerStats.DoDamage(target, player.isHeavyAttack);
+                Debug.Log($"Attacking: {(player.isHeavyAttack ? "Heavy Attack" : "Normal Attack")}");
             }
         }
     }

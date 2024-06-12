@@ -16,9 +16,11 @@ public class PlayerUpDash : PlayerState
     public override void Enter()
     {
         base.Enter();
+        AudioManager.instance.PlaySFX(11, null);
 
         if (!player.UseStamina(player.dashStaminaCost))
         {
+            AudioManager.instance.StopSFX(11);
             stateMachine.ChangeState(player.idleState);
             return;
         }
