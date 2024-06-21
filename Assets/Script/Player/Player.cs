@@ -56,6 +56,7 @@ public class Player : Entity
     public int potionCount;
     public const int maxPotions = 3;
     private bool isAtCheckpoint;
+    private PlayerStats ps;
 
     protected override void Awake()
     {
@@ -108,6 +109,7 @@ public class Player : Entity
         {
             Debug.Log("F key pressed. Setting respawn point.");
             AudioManager.instance.PlaySFX(7, null);
+
             SetRespawnPoint();
         }
 
@@ -217,6 +219,7 @@ public class Player : Entity
     {
         respawnPoint = transform.position;
         potionCount = maxPotions; // Refill potions at checkpoint
+        HealPlayer(playerStats.GetMaxHpValue() - playerStats.currHp); // Heal to full health
         Debug.Log("Respawn point set to: " + respawnPoint + " and potions refilled.");
     }
 

@@ -22,7 +22,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void ExitGame()
     {
-        Debug.Log("Quit Game");
+        Application.Quit();
     }
 
     IEnumerator LoadSceneWithFade(float _delay)
@@ -30,6 +30,8 @@ public class MainMenuUI : MonoBehaviour
         uiFade.FadeOut();
 
         yield return new WaitForSeconds(_delay);
+
+        AudioManager.instance.StopAllBGM();
 
         SceneManager.LoadScene(sceneName);
     }
